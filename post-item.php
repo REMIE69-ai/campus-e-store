@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post an Item – Campus E-Store</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a href="index.php" class="logo">Campus<span>Store</span></a>
+  <nav>
+    <a href="index.php">Home</a>
+    <a href="browse.php">Browse</a>
+    <a href="categories.php">Categories</a>
+  </nav>
+  <div class="nav-actions">
+    <a href="dashboard.php" class="btn btn-outline btn-sm">← Dashboard</a>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <h1>Post an item for sale</h1>
+    <p>Fill in the details below and your listing will go live immediately</p>
+  </div>
+</div>
+
+<!-- FORM -->
+<section class="section-sm">
+  <div class="container">
+    <div style="max-width: 700px; margin: 0 auto;">
+
+      <div class="alert alert-success" style="margin-bottom: 24px;">
+        ✅ Your listing is <strong>free to post</strong>. It will be visible to all campus users immediately.
+      </div>
+
+      <form action="browse.php" method="get">
+
+        <!-- STEP 1 -->
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 20px;">
+          <h3 style="font-size: 16px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
+            📋 Step 1 – Item details
+          </h3>
+
+          <div class="form-group">
+            <label for="title">Item title *</label>
+            <input type="text" id="title" placeholder="e.g. HP EliteBook 840 G3 Laptop" required/>
+            <p class="form-note">Be specific — include brand, model, and key detail</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-group">
+              <label for="category">Category *</label>
+              <select id="category" required>
+                <option value="">Select category…</option>
+                <option>💻 Computing</option>
+                <option>📱 Electronics</option>
+                <option>👕 Boys' Items</option>
+                <option>👗 Girls' Items</option>
+                <option>📚 Books</option>
+                <option>⚙️ Engineering</option>
+                <option>🏠 Hostel & Home</option>
+                <option>🎨 Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="condition">Condition *</label>
+              <select id="condition" required>
+                <option value="">Select condition…</option>
+                <option>✅ New</option>
+                <option>👍 Used – Good condition</option>
+                <option>🔧 Used – Fair condition</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="price">Price (UGX) *</label>
+            <input type="number" id="price" placeholder="e.g. 850000" min="0" required/>
+            <p class="form-note">Enter price in Ugandan Shillings. Use 0 for free items.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description *</label>
+            <textarea id="description" placeholder="Describe your item in detail — specifications, reason for selling, any defects, what's included…" required></textarea>
+            <p class="form-note">Good descriptions get more buyers. Be honest about the condition.</p>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 20px;">
+          <h3 style="font-size: 16px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
+            📸 Step 2 – Add photos
+          </h3>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px;">
+            <label style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 120px; border: 2px dashed var(--border); border-radius: var(--radius-sm); cursor: pointer; color: var(--muted); font-size: 13px; gap: 8px; transition: border-color 0.2s;">
+              <span style="font-size: 28px;">📷</span>
+              <span>Main photo</span>
+              <input type="file" accept="image/*" style="display: none;"/>
+            </label>
+            <label style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 120px; border: 2px dashed var(--border); border-radius: var(--radius-sm); cursor: pointer; color: var(--muted); font-size: 13px; gap: 8px; transition: border-color 0.2s;">
+              <span style="font-size: 28px;">📷</span>
+              <span>Photo 2</span>
+              <input type="file" accept="image/*" style="display: none;"/>
+            </label>
+            <label style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 120px; border: 2px dashed var(--border); border-radius: var(--radius-sm); cursor: pointer; color: var(--muted); font-size: 13px; gap: 8px; transition: border-color 0.2s;">
+              <span style="font-size: 28px;">📷</span>
+              <span>Photo 3</span>
+              <input type="file" accept="image/*" style="display: none;"/>
+            </label>
+          </div>
+          <p class="form-note">Upload up to 3 photos. Clear, well-lit photos attract more buyers. (JPG, PNG, max 5MB each)</p>
+        </div>
+
+        <!-- STEP 3 -->
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 20px;">
+          <h3 style="font-size: 16px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
+            📞 Step 3 – Contact details
+          </h3>
+
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp number *</label>
+            <input type="tel" id="whatsapp" placeholder="+256 700 000000" required/>
+            <p class="form-note">Buyers will contact you directly on WhatsApp. This will be shown on your listing.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Alternative phone (optional)</label>
+            <input type="tel" id="phone" placeholder="+256 750 000000"/>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Meet-up location on campus</label>
+            <input type="text" id="location" placeholder="e.g. Lumumba Hall, Main Library entrance, Mary Stuart…"/>
+            <p class="form-note">Tell buyers where on campus you prefer to meet for handover.</p>
+          </div>
+        </div>
+
+        <!-- SUBMIT -->
+        <div style="display: flex; gap: 12px;">
+          <input type="submit" value="🚀 Post listing – it's free!" class="btn btn-primary btn-lg" style="flex: 1; cursor: pointer;"/>
+          <a href="dashboard.php" class="btn btn-outline btn-lg">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Campus<span style="color: var(--gold);">Store</span></div>
+  <p style="margin-top: 8px;">&copy; 2025 CampusStore – BIT1 Project</p>
+</footer>
+
+</body>
+</html>
