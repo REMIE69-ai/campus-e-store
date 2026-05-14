@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – Campus E-Store</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a href="index.html" class="logo">Campus<span>Store</span></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="categories.html">Categories</a>
+  </nav>
+  <div class="nav-actions">
+    <a href="post-item.html" class="btn btn-gold btn-sm">+ Post item</a>
+    <a href="login.html" class="btn btn-outline btn-sm">Logout</a>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <div class="avatar" style="width: 56px; height: 56px; font-size: 22px;">JM</div>
+      <div>
+        <h1 style="font-size: 24px;">Welcome back, John 👋</h1>
+        <p>john.mukasa@mak.ac.ug &nbsp;·&nbsp; <span class="badge badge-green">✅ Verified student</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<section class="section-sm">
+  <div class="container">
+
+    <!-- STATS -->
+    <div class="grid-4" style="margin-bottom: 32px;">
+      <div class="stat-card">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Active listings</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">142</div>
+        <div class="stat-label">Total views</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Saved items</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Items sold</div>
+      </div>
+    </div>
+
+    <!-- TABS LAYOUT -->
+    <div class="tabs">
+      <div class="tab active">My listings</div>
+      <div class="tab">Saved items</div>
+      <div class="tab">Profile settings</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 320px; gap: 28px; align-items: start;">
+
+      <!-- MAIN: My Listings -->
+      <div>
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h3 style="font-size: 17px;">My listings (3)</h3>
+            <a href="post-item.html" class="btn btn-primary btn-sm">+ Add new</a>
+          </div>
+
+          <!-- Listing 1 – Active -->
+          <div class="listing-row">
+            <div class="listing-thumb">💻</div>
+            <div class="listing-info">
+              <h4>HP EliteBook 840 G3</h4>
+              <p>UGX 850,000 · 💻 Computing · 47 views</p>
+            </div>
+            <span class="badge badge-green">Active</span>
+            <div class="listing-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <a href="post-item.html" class="btn btn-outline btn-sm">Edit</a>
+              <a href="#" class="btn btn-sm" style="background: #ffe8e8; color: #b32020; border: none;">Delete</a>
+            </div>
+          </div>
+
+          <!-- Listing 2 – Active -->
+          <div class="listing-row">
+            <div class="listing-thumb">🎧</div>
+            <div class="listing-info">
+              <h4>Sony WH-1000XM4 Headphones</h4>
+              <p>UGX 280,000 · 🎧 Electronics · 31 views</p>
+            </div>
+            <span class="badge badge-green">Active</span>
+            <div class="listing-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <a href="post-item.html" class="btn btn-outline btn-sm">Edit</a>
+              <a href="#" class="btn btn-sm" style="background: #ffe8e8; color: #b32020; border: none;">Delete</a>
+            </div>
+          </div>
+
+          <!-- Listing 3 – Active -->
+          <div class="listing-row">
+            <div class="listing-thumb">📚</div>
+            <div class="listing-info">
+              <h4>Data Structures Textbook</h4>
+              <p>UGX 35,000 · 📚 Books · 64 views</p>
+            </div>
+            <span class="badge badge-green">Active</span>
+            <div class="listing-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <a href="post-item.html" class="btn btn-outline btn-sm">Edit</a>
+              <a href="#" class="btn btn-sm" style="background: #ffe8e8; color: #b32020; border: none;">Delete</a>
+            </div>
+          </div>
+
+          <!-- Listing 4 – Sold -->
+          <div class="listing-row" style="opacity: 0.6;">
+            <div class="listing-thumb">🔌</div>
+            <div class="listing-info">
+              <h4>USB-C Hub 7-in-1</h4>
+              <p>UGX 75,000 · 💻 Computing · Sold</p>
+            </div>
+            <span class="badge badge-muted">Sold</span>
+            <div class="listing-actions">
+              <a href="#" class="btn btn-outline btn-sm">Relist</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAVED ITEMS section (shown when "Saved items" tab active) -->
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-top: 20px;">
+          <h3 style="font-size: 17px; margin-bottom: 16px;">Saved / Favourite items (5)</h3>
+
+          <div class="listing-row">
+            <div class="listing-thumb">📱</div>
+            <div class="listing-info">
+              <h4>Samsung Galaxy A15</h4>
+              <p>UGX 620,000 · 📱 Electronics</p>
+            </div>
+            <div class="listing-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <a href="#" class="btn btn-sm" style="background: #ffe8e8; color: #b32020; border: none;">Remove</a>
+            </div>
+          </div>
+
+          <div class="listing-row">
+            <div class="listing-thumb">👟</div>
+            <div class="listing-info">
+              <h4>Nike Air Force 1 – Size 42</h4>
+              <p>UGX 190,000 · 👕 Boys' Items</p>
+            </div>
+            <div class="listing-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <a href="#" class="btn btn-sm" style="background: #ffe8e8; color: #b32020; border: none;">Remove</a>
+            </div>
+          </div>
+
+          <div class="listing-row">
+            <div class="listing-thumb">🎽</div>
+            <div class="listing-info">
+              <h4>Ladies Denim Jacket</h4>
+              <p>UGX 95,000 · 👗 Girls' Items</p>
+            </div>
+            <div class="listing-actions">
+              <a href="product.html" class="btn btn-outline btn-sm">View</a>
+              <a href="#" class="btn btn-sm" style="background: #ffe8e8; color: #b32020; border: none;">Remove</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Profile summary + quick links -->
+      <div>
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 20px;">
+          <h3 style="font-size: 15px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">My profile</h3>
+          <table style="width: 100%; font-size: 13px; border-collapse: collapse;">
+            <tr><td style="padding: 8px 0; color: var(--muted);">Name</td><td style="padding: 8px 0; font-weight: 500;">John Mukasa</td></tr>
+            <tr><td style="padding: 8px 0; color: var(--muted);">Email</td><td style="padding: 8px 0;">john@mak.ac.ug</td></tr>
+            <tr><td style="padding: 8px 0; color: var(--muted);">Role</td><td style="padding: 8px 0;">Student – BIT Yr 2</td></tr>
+            <tr><td style="padding: 8px 0; color: var(--muted);">WhatsApp</td><td style="padding: 8px 0;">+256 700 000000</td></tr>
+            <tr><td style="padding: 8px 0; color: var(--muted);">Joined</td><td style="padding: 8px 0;">Jan 2025</td></tr>
+          </table>
+          <a href="profile.html" class="btn btn-outline btn-sm btn-full" style="margin-top: 16px;">Edit profile</a>
+        </div>
+
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;">
+          <h3 style="font-size: 15px; margin-bottom: 14px;">Quick actions</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="post-item.html" class="btn btn-gold btn-full">📦 Post new item</a>
+            <a href="browse.html" class="btn btn-outline btn-full">🔍 Browse listings</a>
+            <a href="profile.html" class="btn btn-outline btn-full">⚙️ Account settings</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Campus<span style="color: var(--gold);">Store</span></div>
+  <p style="margin-top: 8px;">&copy; 2025 CampusStore – BIT1 Project</p>
+</footer>
+
+</body>
+</html>
